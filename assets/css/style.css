@@ -1,0 +1,87 @@
+* {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: bisque;
+}
+
+.article {
+  max-width: 50rem;
+  margin: auto;
+
+  /* flex-wrap: wrap; */
+  padding: 1rem;
+  background-color: white;
+}
+
+@media screen and (min-width: 520px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+  }
+}
+
+.article-image {
+  flex: 8;
+  /* flex-basis: 500px;
+  flex-grow: 1;
+  flex-shrink: 0; */
+  padding: 1em;
+}
+
+.excerpt {
+  flex: 4;
+  padding: 1em;
+}
+
+.article-image {
+  margin: 0;
+  padding: 0;
+}
+
+.article-image img {
+  width: 100%;
+}
+
+.site-navigation {
+  height: 90px;
+  margin-bottom: 3rem;
+  background-color: white;
+}
+
+
+.menu {
+  height: 90px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* poravnavanje po horizontali */
+  align-items: center; /* poravnavanje po vertikali */
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.ima-podlistu {
+  position: relative; /* this is a master */
+}
+
+.ima-podlistu:hover .podlista {
+  display: block;
+}
+
+.podlista {
+  list-style: none;
+  padding: 0;
+  display: none;
+  position: absolute; /* this is a slave */
+  top: 20px;
+  left: 0;
+  text-align: left;
+}
+
+.ima-podlistu:last-of-type .podlista {
+  right: 0;
+  text-align: right;
+}
